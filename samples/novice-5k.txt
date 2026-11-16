@@ -1,0 +1,4 @@
+# Bare-bones 5K - goal time and nothing else
+Race: Park 5K
+Distance: 5k
+Goal time: 24:00

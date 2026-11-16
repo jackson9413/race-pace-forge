@@ -1,0 +1,19 @@
+# Half marathon eight weeks out, shin still grumbling
+Race: Riverside Half
+Distance: half
+Goal time: 1:45:00
+Date: 2027-05-02
+Start time: 07:30
+Course: rolling
+Elevation: 0/0, 5/120, 10/60, 13.1/40
+Aid stations: 3, 6, 9, 12 miles
+Weight: 70 kg
+Age: 36
+Level: intermediate
+Recent race: 10k in 45:30
+Weekly miles: 30
+Long run: 13 miles in 1:35:00
+Injuries: right shin soreness, ongoing for 3 weeks
+Temp: 18C
+Humidity: 70%
+Plan weeks: 8

@@ -1,0 +1,21 @@
+# Desert 50K in the heat with a calf that is not right
+Race: Desert Valley 50K
+Distance: 50k
+Goal time: 5:15:00
+Date: 2027-02-20
+Start time: 06:00
+Course: hilly
+Elevation: 0/0, 8/400, 16/700, 24/300, 32/900, 40/500, 50/200
+Aid stations: 8, 16, 24, 32, 40, 46 miles
+Weight: 80 kg
+Age: 45
+Level: experienced
+Recent race: marathon in 3:52:00
+Weekly miles: 55
+Long run: 26 miles in 3:10:00
+Sweat rate: 1.4
+Injuries: left calf strain 2 weeks ago
+Temp: 33C
+Humidity: 40%
+Wind: 12 kph
+Plan weeks: 20

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Race Pace Forge - race pacing, fueling and training planner</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Race Pace Forge</h1>
+    <p>Paste a race brief. Get grade-adjusted splits, a fueling and hydration plan, a training block, and a readiness score with the fixes that matter first.</p>
+  </div>
+  <div class="badges">
+    <span class="badge">Local only</span>
+    <span class="badge">No API keys</span>
+    <span class="badge">No LLM</span>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="panel brief">
+    <h2>Race brief</h2>
+    <p class="hint">One <code>Key: value</code> per line. Only the goal time is required - everything else sharpens the plan.</p>
+    <textarea id="brief" spellcheck="false" rows="18" placeholder="Race: Chicago Marathon 2027
+Distance: marathon
+Goal time: 3:30:00
+Date: 2027-10-10
+Start time: 07:30
+Course: rolling hills
+Elevation: 0/0, 10/120, 20/80, 26/200, 30/120, 40/60
+Aid stations: 5, 10, 16, 21, 24 miles
+Weight: 75 kg
+Age: 38
+Level: intermediate
+Recent race: 10k in 44:00
+Weekly miles: 40
+Long run: 20 miles in 1:40:00
+Threshold pace: 7:10
+Temp: 16C
+Humidity: 60%
+Wind: 8 kph"></textarea>
+
+    <div class="row">
+      <label class="field">
+        <span>Review profile</span>
+        <select id="reviewProfile"></select>
+      </label>
+      <button id="analyze" class="primary">Build plan</button>
+    </div>
+
+    <div class="samples">
+      <span class="hint">Examples:</span>
+      <div id="sampleChips" class="chips"></div>
+    </div>
+
+    <details class="keys">
+      <summary>Accepted keys</summary>
+      <div class="keygrid">
+        <code>Race / Event</code><code>Distance</code><code>Goal time</code><code>Date</code>
+        <code>Start time</code><code>Course</code><code>Elevation</code><code>Aid stations</code>
+        <code>Units</code><code>Weight</code><code>Age</code><code>Level</code>
+        <code>Recent race</code><code>Recent race time</code><code>Weekly miles</code>
+        <code>Long run</code><code>Long run time</code><code>Threshold pace</code>
+        <code>Sweat rate</code><code>Injury</code><code>Temp</code><code>Humidity</code>
+        <code>Wind</code><code>Plan weeks</code><code>Notes</code>
+      </div>
+      <p class="hint">Times accept <code>3:30:00</code>, <code>3:30</code>, <code>3h30m</code> or <code>210 min</code>. Elevation is <code>marker/feet</code> pairs. Distances accept <code>20 miles</code>, <code>32 km</code>, <code>10k</code>, <code>half marathon</code>.</p>
+    </details>
+
+    <div id="error" class="error" hidden></div>
+  </section>
+
+  <section class="panel results">
+    <div id="empty" class="empty">
+      <h3>No plan yet</h3>
+      <p>Load an example or paste your own brief, then hit <strong>Build plan</strong>.</p>
+    </div>
+
+    <div id="output" hidden>
+      <div class="scorehead">
+        <div class="scorebig">
+          <span id="overall">0</span>
+          <small>/100</small>
+        </div>
+        <div class="scoretext">
+          <h2 id="raceTitle"></h2>
+          <p id="raceSummary"></p>
+          <span id="verdict" class="verdict"></span>
+          <span id="profileLabel" class="pill"></span>
+        </div>
+      </div>
+
+      <div id="axes" class="axes"></div>
+      <div id="caps" class="caps"></div>
+
+      <nav class="tabs" id="tabs">
+        <button data-tab="pace" class="active">Pace plan</button>
+        <button data-tab="zones">Training zones</button>
+        <button data-tab="fuel">Fuel &amp; hydration</button>
+        <button data-tab="training">Training block</button>
+        <button data-tab="findings">Findings</button>
+        <button data-tab="fixes">Fix plan</button>
+        <button data-tab="notes">Model notes</button>
+      </nav>
+
+      <div id="tabBody" class="tabbody"></div>
+
+      <div class="actions">
+        <button id="save" class="primary">Save this plan</button>
+        <select id="rating" title="Self rating">
+          <option value="">Rate it...</option>
+          <option value="5">5 - nailed it</option>
+          <option value="4">4 - good</option>
+          <option value="3">3 - okay</option>
+          <option value="2">2 - off</option>
+          <option value="1">1 - wrong</option>
+        </select>
+        <input id="notes" type="text" placeholder="Note (saved with the plan)">
+        <span id="saveMsg" class="hint"></span>
+      </div>
+
+      <div class="exports">
+        <span class="hint">Exports (after saving):</span>
+        <a id="expMd" href="#">Markdown</a>
+        <a id="expJson" href="#">JSON</a>
+        <a id="expCsv" href="#">Splits CSV</a>
+      </div>
+
+      <div class="history">
+        <h3>Saved plans</h3>
+        <div id="runList" class="runlist"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

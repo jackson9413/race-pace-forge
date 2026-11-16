@@ -1,0 +1,16 @@
+# First marathon, 3:05 ambition on 22 miles a week
+Race: City Marathon
+Distance: marathon
+Goal time: 3:05:00
+Date: 2027-04-18
+Start time: 07:00
+Course: flat
+Weight: 82 kg
+Age: 41
+Level: beginner
+Recent race: 10k in 52:00
+Weekly miles: 22
+Long run: 14 miles in 2:05:00
+Temp: 12C
+Humidity: 70%
+Plan weeks: 12

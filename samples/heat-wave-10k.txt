@@ -1,0 +1,17 @@
+# 10K on a hot afternoon, goal set from a fast 5K
+Race: Summer Heat 10K
+Distance: 10k
+Goal time: 38:00
+Date: 2027-07-10
+Start time: 14:00
+Course: flat
+Weight: 68 kg
+Age: 29
+Level: intermediate
+Recent race: 5k in 19:40
+Weekly miles: 28
+Long run: 10 miles in 1:12:00
+Temp: 33C
+Humidity: 55%
+Wind: 5 kph
+Plan weeks: 8

@@ -1,0 +1,20 @@
+# Chicago Marathon 2027 - a well-prepared 3:30 marathon
+Race: Chicago Marathon 2027
+Distance: marathon
+Goal time: 3:30:00
+Date: 2027-10-10
+Start time: 07:30
+Course: rolling hills
+Elevation: 0/0, 10/130, 16/90, 20/210, 24/120, 30/150, 34/60, 40/90
+Aid stations: 4, 9, 14, 19, 24, 25.2 miles
+Weight: 75 kg
+Age: 38
+Level: intermediate
+Recent race: 10k in 44:00
+Weekly miles: 45
+Long run: 20 miles in 1:42:00
+Threshold pace: 7:15
+Temp: 14C
+Humidity: 65%
+Wind: 10 kph
+Plan weeks: 18
